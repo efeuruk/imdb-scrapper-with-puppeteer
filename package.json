@@ -1,0 +1,13 @@
+{
+  "name": "fe-chit-chat-puppeteer-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "scrap:imdb": "node index"
+  },
+  "main": "index.js",
+  "author": "Ersoy Efe Uruk",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^5.3.1"
+  }
+}
