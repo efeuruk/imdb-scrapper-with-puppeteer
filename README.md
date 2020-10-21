@@ -1,5 +1,7 @@
 This script is for to scrap a movie's title, rating and duration.
+
 Of course with this script you can get other parameters from the movie's page.
 
-Usage: you can use: yarn scrap:imdb <movie-name> or npm run scrap:imdb <movie-name>
-ex: yarn scrap godfather
+<b>Usage:</b> yarn scrap:imdb <code>--movie-name--</code> or npm run scrap:imdb <code>--movie-name--</code>
+
+<b>Ex:</b> yarn scrap godfather
