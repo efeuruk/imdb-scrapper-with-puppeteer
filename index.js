@@ -6,6 +6,7 @@
 	ex: yarn scrap godfather
 */
 const puppeteer = require("puppeteer");
+const fs = require("fs");
 
 (async () => {
   const imdb = "https://www.imdb.com";
@@ -13,7 +14,8 @@ const puppeteer = require("puppeteer");
   if (args.length < 1) {
     throw new Error("You should enter a movie name");
   }
-  const movie = args.join(" ");
+
+  const movie = args[args.length - 1];
 
   // Open up the browser, { headless: false }
   const browser = await puppeteer.launch({ headless: false });
@@ -76,6 +78,15 @@ const puppeteer = require("puppeteer");
   });
 
   console.log(data);
+
+  if (args[0] === "write") {
+    fs.writeFile("movie.json", JSON.stringify(data), err => {
+      if (err) {
+        console.log(err);
+      }
+      console.log("File has been created successfully");
+    });
+  }
 
   await browser.close();
 })();

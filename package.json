@@ -2,7 +2,9 @@
   "name": "fe-chit-chat-puppeteer-demo",
   "version": "1.0.0",
   "scripts": {
-    "scrap:imdb": "node index"
+    "scrap:imdb": "node index",
+    "scrap:imdb:write-to-a-file": "node index write",
+    "delete:movie-json": "node delete-movie-json"
   },
   "main": "index.js",
   "author": "Ersoy Efe Uruk",
